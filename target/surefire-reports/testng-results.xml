@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-04T18:20:41 IST" name="Surefire suite" finished-at="2023-09-04T18:22:52 IST" duration-ms="130753">
+    <groups>
+    </groups>
+    <test started-at="2023-09-04T18:20:41 IST" name="Surefire test" finished-at="2023-09-04T18:22:52 IST" duration-ms="130753">
+      <class name="com.apollo2.atlaseditor.sanitytesting">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:20:41 IST" name="setup" finished-at="2023-09-04T18:20:42 IST" duration-ms="841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:1, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:20:42 IST" name="login" finished-at="2023-09-04T18:21:05 IST" duration-ms="23072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="sectionselect()[pri:2, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:05 IST" name="sectionselect" finished-at="2023-09-04T18:21:15 IST" duration-ms="9746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sectionselect -->
+        <test-method signature="atlaseditor()[pri:3, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:15 IST" name="atlaseditor" finished-at="2023-09-04T18:21:20 IST" duration-ms="5061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atlaseditor -->
+        <test-method signature="oldmenu()[pri:4, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:20 IST" name="oldmenu" finished-at="2023-09-04T18:21:23 IST" duration-ms="3877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oldmenu -->
+        <test-method signature="contributor()[pri:5, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:23 IST" name="contributor" finished-at="2023-09-04T18:21:30 IST" duration-ms="6159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contributor -->
+        <test-method signature="draw()[pri:6, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:30 IST" name="draw" finished-at="2023-09-04T18:21:33 IST" duration-ms="3057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draw -->
+        <test-method signature="annotation()[pri:7, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:33 IST" name="annotation" finished-at="2023-09-04T18:21:49 IST" duration-ms="15981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- annotation -->
+        <test-method signature="save()[pri:9, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:49 IST" name="save" finished-at="2023-09-04T18:21:51 IST" duration-ms="2667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- save -->
+        <test-method signature="back()[pri:10, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:51 IST" name="back" finished-at="2023-09-04T18:21:58 IST" duration-ms="6642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- back -->
+        <test-method signature="retrive()[pri:11, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:21:58 IST" name="retrive" finished-at="2023-09-04T18:22:27 IST" duration-ms="28696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrive -->
+        <test-method signature="delete()[pri:12, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:22:27 IST" name="delete" finished-at="2023-09-04T18:22:51 IST" duration-ms="24531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.apollo2.atlaseditor.sanitytesting@3eb25e1a]" started-at="2023-09-04T18:22:51 IST" name="close" finished-at="2023-09-04T18:22:52 IST" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.apollo2.atlaseditor.sanitytesting -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

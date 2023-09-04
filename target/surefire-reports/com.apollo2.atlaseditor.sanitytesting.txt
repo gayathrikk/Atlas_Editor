@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.apollo2.atlaseditor.sanitytesting
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 131.068 s - in com.apollo2.atlaseditor.sanitytesting
