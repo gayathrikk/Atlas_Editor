@@ -5,6 +5,7 @@
     <classes>
       <class name="com.apollo2.atlaseditor.sanitytesting">
         <methods>
+          <include name="retrive"/>
           <include name="close"/>
           <include name="setup"/>
           <include name="delete"/>

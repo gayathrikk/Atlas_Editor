@@ -48,6 +48,11 @@
     <artifactId>selenium-chrome-driver</artifactId>
     <version>3.141.59</version> <!-- Use the desired version -->
 </dependency>
+<dependency>
+    <groupId>com.github.stephenc.monte</groupId>
+    <artifactId>monte-screen-recorder</artifactId>
+    <version>0.7.7.0</version>
+</dependency>
 
   </dependencies>
 

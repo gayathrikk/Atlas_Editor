@@ -2,42 +2,39 @@ package com.apollo2.atlaseditor;
 
 
 
-import java.io.FileInputStream;
+import org.testng.annotations.Test;
+
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Properties;
 import java.util.Set;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
 public class sanitytesting {
-	private RemoteWebDriver driver;
+	 
+   private RemoteWebDriver driver;
 	
 	@BeforeTest
 	
-	public void setup() throws MalformedURLException
+	public void setup() throws Exception
 	{
+		ScreenRecorderUtil.startRecording("setup");
 		  DesiredCapabilities dc = DesiredCapabilities.chrome();
 	        URL url = new URL("http://172.12.20.118:5555/wd/hub");
 	        driver = new RemoteWebDriver(url, dc);
+	
+	       
 	}
 	@Test(priority=1)
 	public void login() throws InterruptedException
@@ -65,6 +62,7 @@ public class sanitytesting {
 	            Thread.sleep(5000);
 	            driver.switchTo().window(parentWindow);
 	            Thread.sleep(5000);
+	            System.out.println("Login successfully");
 	        
 	}
 	
@@ -88,11 +86,12 @@ public class sanitytesting {
 	{
 		driver.findElement(By.xpath("//a[@title='Atlas Editor']")).click();
 		Thread.sleep(5000);
+		System.out.println("Atlas editor opened");
 	}
 	@Test(priority=4)
 	public void oldmenu() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//a[@title='Old Menu']")).click();
+		driver.findElement(By.xpath("//a[@title='Edit Menu']")).click();
 		Thread.sleep(3000);
 	}
 	@Test(priority=5)
@@ -102,12 +101,14 @@ public class sanitytesting {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
 		Thread.sleep(4000);
+		System.out.println("Contributor selected");
 	}
 	@Test(priority=6)
 	public void draw() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//a[@title='Draw']")).click();
 		Thread.sleep(3000);
+		System.out.println("Edit mode opened");
 	}
 	
 	@Test(priority=7)
@@ -140,9 +141,10 @@ public class sanitytesting {
             .release()
             .perform();
 	        Thread.sleep(5000);
+	        System.out.println("Annotation completed");
 		
 	}
-	@Test(priority=9)
+	@Test(priority=8)
 	public void save() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//a[@title='Save']")).click();
@@ -150,12 +152,13 @@ public class sanitytesting {
 		By toasterLocator = By.xpath("//div[text()='Sucessfully saved the regions']");
 		WebElement toasterElement = deleteWait.until(ExpectedConditions.presenceOfElementLocated(toasterLocator));
 		String toasterMessage = toasterElement.getText();
-		Assert.assertEquals("Sucessfully saved the regions", toasterMessage);
+		AssertJUnit.assertEquals("Sucessfully saved the regions", toasterMessage);
+		System.out.println("Saved the regions successfully");
 		Thread.sleep(2000);
 		
 
 	}
-	@Test(priority=10)
+	@Test(priority=9)
 	public void back() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//a[@title='Close']")).click();
@@ -163,13 +166,13 @@ public class sanitytesting {
 		driver.findElement(By.xpath("//a[@title='Back']")).click();
 		Thread.sleep(4000);
 	}
-	@Test(priority=11)
+	@Test(priority=10)
 	public void retrive() throws InterruptedException
 	{
 		 driver.findElement(By.xpath("(//span[text()='382'])[1]")).click();
 		 driver.findElement(By.xpath("//a[@title='Atlas Editor']")).click();
 		 Thread.sleep(3000);
-		 driver.findElement(By.xpath("//a[@title='Old Menu']")).click();
+		 driver.findElement(By.xpath("//a[@title='Edit Menu']")).click();
 		 Thread.sleep(2000);
 		 driver.findElement(By.xpath("(//nb-icon[@pack='nebular-essentials'])[3]")).click();
 		 Thread.sleep(2000);
@@ -192,7 +195,7 @@ public class sanitytesting {
 		 Thread.sleep(4000);
 		 
 	}
-	@Test(priority=12)
+	@Test(priority=11)
 	public void delete() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//a[@title='Draw']")).click();
@@ -220,11 +223,14 @@ public class sanitytesting {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@title='Back']")).click();
 		Thread.sleep(4000);
+		System.out.println("annotated data deleted successfully");
 	}
 	@AfterTest
-	public void close()
+	public void close() throws Exception
 	{
+		ScreenRecorderUtil.stopRecording();
 		driver.quit();
 
 }
+
 }
