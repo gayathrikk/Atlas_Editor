@@ -29,7 +29,7 @@ public class sanitytesting {
 	
 	public void setup() throws Exception
 	{
-		ScreenRecorderUtil.startRecording("setup");
+		
 		  DesiredCapabilities dc = DesiredCapabilities.chrome();
 	        URL url = new URL("http://172.12.20.118:5555/wd/hub");
 	        driver = new RemoteWebDriver(url, dc);
