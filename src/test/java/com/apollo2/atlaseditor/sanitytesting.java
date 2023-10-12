@@ -228,7 +228,7 @@ public class sanitytesting {
 	@AfterTest
 	public void close() throws Exception
 	{
-		ScreenRecorderUtil.stopRecording();
+		
 		driver.quit();
 
 }
